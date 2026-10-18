@@ -1,0 +1,85 @@
+POST http://localhost:3000/users/create
+Content-Type: application/json
+
+{
+    "firstname": "Marcelo Garcia",
+    "email":"marcelogarcia000@gmail.com",
+    "cpf": "077.497.293-99"
+}
+
+###
+
+POST http://localhost:3000/users/update/c3e958ce-974a-48a1-838d-a5327fcfa1b5
+Content-Type: application/json
+
+{
+    "firstname": "Garcia"
+}
+
+###
+
+GET http://localhost:3000/users
+
+
+###
+
+POST http://localhost:3000/books/create
+Content-Type: application/json
+
+{
+    "title": "Clean Code",
+    "author":"Robert C. Martin",
+    "inventory": 8
+}
+
+###
+
+POST http://localhost:3000/books/create
+Content-Type: application/json
+
+{
+    "title": "The lord of the Ring",
+    "author":"J. R. R. Tolkien",
+     "inventory": 2
+}
+
+###
+
+GET http://localhost:3000/books
+###
+
+
+GET http://localhost:3000/borrow
+###
+
+POST http://localhost:3000/borrow/create
+Content-Type: application/json
+
+{
+    "userId": "a2680028-0c1e-4f2d-bb59-e63ea6113d93",
+    "bookId": "15a7feb6-2ce9-4f60-b484-223c802fec7f"
+}
+
+###
+
+POST http://localhost:3000/borrow/return/92e5ba00-2777-4d2e-aa14-94e05e667468
+
+
+###
+
+GET http://localhost:3000/users/cec33841-c1bb-4b22-9f70-15306658b6fd
+
+
+###
+
+GET http://localhost:3000/status
+
+###
+
+GET http://localhost:3000/migrations
+
+###
+
+POST http://localhost:3000/migrations/run
+
+
