@@ -8,11 +8,11 @@ import { DataSourceOptions } from "typeorm";
 
 export const dataSourceOptions: DataSourceOptions = {
     type: 'postgres',
-    host: new ConfigService().get<string>('DATABASE_HOST'),
-    port: new ConfigService().get<number>('DATABASE_PORT'),
-    username: new ConfigService().get<string>('DATABASE_USER'),
-    password: new ConfigService().get<string>('DATABASE_PASSWORD'),
-    database:  new ConfigService().get<string>('DATABASE_NAME'),
+    host: new ConfigService().get<string>('POSTGRES_HOST'),
+    port: new ConfigService().get<number>('POSTGRES_PORT'),
+    username: new ConfigService().get<string>('POSTGRES_USER'),
+    password: new ConfigService().get<string>('POSTGRES_PASSWORD'),
+    database:  new ConfigService().get<string>('POSTGRES_NAME'),
     entities: [UsersOrmEntity, BooksOrmEntity, BorrowOrmEntity],
     migrations: [join(__dirname, 'migrations', '*.{ts,js}')],
     synchronize: false,

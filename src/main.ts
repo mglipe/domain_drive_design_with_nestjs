@@ -22,6 +22,6 @@ async function bootstrap() {
   );
 
   app.useGlobalFilters(new ZodExceptionFilter())
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.PORT ?? 3333, '0.0.0.0');
 }
 bootstrap();

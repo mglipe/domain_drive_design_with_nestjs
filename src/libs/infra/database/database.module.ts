@@ -15,11 +15,11 @@ import { ConfigurationModule } from '@/libs/configuration/configuration.module';
             useFactory: (config: ConfigService)=>(
                 {
                 type: 'postgres',
-                host: config.getOrThrow<string>('DATABASE_HOST'),
-                port: config.getOrThrow<number>('DATABASE_PORT'),
-                username: config.getOrThrow<string>('DATABASE_USER'),
-                password: config.getOrThrow<string>('DATABASE_PASSWORD'),
-                database:  config.getOrThrow<string>('DATABASE_NAME'),
+                host: config.getOrThrow<string>('POSTGRES_HOST'),
+                port: config.getOrThrow<number>('POSTGRES_PORT'),
+                username: config.getOrThrow<string>('POSTGRES_USER'),
+                password: config.getOrThrow<string>('POSTGRES_PASSWORD'),
+                database:  config.getOrThrow<string>('POSTGRES_NAME'),
                 entities: [UsersOrmEntity, BooksOrmEntity, BorrowOrmEntity],
                 migrations: [join(__dirname, 'migrations', '*.{ts,js}')],
                 synchronize: false,

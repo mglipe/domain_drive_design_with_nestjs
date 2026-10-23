@@ -1,0 +1,11 @@
+node_modules
+README.md
+.gitignore
+.env.test
+.prettierrc
+eslint.config.mjs
+request.http
+test.ts
+tsconfig.build.json
+.dockerignore
+
